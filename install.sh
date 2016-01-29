@@ -19,15 +19,10 @@ function usage()
     done
     echo ""
     echo "Suported options :"
-    echo -e "\t-a|--available-files : list all available file on which you can crete symlink"
     echo -e "\t-c|--clean : delete all symlink and restore previous file if any"
-    echo -e "\t-e|--existing : list all existing symlink"
-    echo -e "\t-f|--files file1,file2 : give a list a files comma separated"
     echo -e "\t-h|--help : display this help"
     echo -e "\t-l|--symlink: update symlink"
-    echo -e "\t-s|--submodules : init and update submodules"
-    echo -e "\t-g|--geam : my personnal config /!\\ DO NOT USE IT"
-    echo -e "\t--g42 : my personnal config for 42 /!\\ DO NOT USE IT"
+    echo -e "\t-f|--full : my personnal config /!\\ DO NOT USE IT"
     exit 0
 }
 
@@ -56,24 +51,6 @@ function rm_ln()
             fi
         fi
     done
-}
-
-# list the existing symlink
-function existing()
-{
-    FILES=$(ls ${SRC})
-    for i in ${FILES[@]}; do
-        if [[ -L "${DEST}/.${i}" ]]; then
-            ls -l "${DEST}/.${i}"
-        fi
-    done
-}
-
-# redifine LN variable based on user input
-function get_files_list()
-{
-    IFS=','
-    LN=($1)
 }
 
 # get the arg of the script
