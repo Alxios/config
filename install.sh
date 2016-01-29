@@ -86,8 +86,7 @@ fi
 if [[ -n "${DEFAULT}" ]] || [[ -n "${SYMLINK}" ]]; then
     # if it's me, add the git config
     LN+=("gitconfig" "gitignore_global")
-
-	do_ln
+    do_ln
 fi
 
 if [[ -n "${FULL}" ]]; then
@@ -98,5 +97,6 @@ if [[ -n "${FULL}" ]]; then
     brew update
     source $HOME/.zshrc
     brew install htop tig
-	brew install valgrind
+    brew install valgrind
+    export PATH=$HOME/.brew/bin:$PATH
 fi
