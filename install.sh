@@ -86,37 +86,14 @@ while test $# -gt 0; do
             DELETE=true
             unset DEFAULT
             ;;
-        -a|--available_files)
-            ls -l ${SRC}
-            exit 0
-            ;;
-        -e|--existing)
-            existing
-            exit 0
-            ;;
-        -f|--files)
-            shift
-            get_files_list $1
-            ;;
-        -s|--submodules)
-            if [[ -n "${DEFAULT}" ]]; then
-                unset DEFAULT
-            fi
-            SUBMODULES=true
-            ;;
         -l|--symlink)
             if [[ -n "${DEFAULT}" ]]; then
                 unset DEFAULT
             fi
             SYMLINK=true
             ;;
-        -g|--geam)
-            GEAM=true
-            LINUX=true
-            ;;
-        --g42)
-            GEAM=true
-            G42=true
+        -f|--full)
+            FULL=true
             ;;
         *)
             usage $0
@@ -133,26 +110,16 @@ if [[ -n "${DEFAULT}" ]] || [[ -n "${SYMLINK}" ]]; then
     # if it's me, add the git config
     LN+=("gitconfig" "gitignore_global")
 
-    # if it's me on linux
-    if [[ -n "${LINUX}" ]]; then
-        LN+=("irssi" "tmux" "tmux.config")
-    fi
-
-    do_ln
+	do_ln
 fi
 
-if [[ -n "${G42}" ]]; then
+if [[ -n "${FULL}" ]]; then
     cd $HOME
-    if [[ ! -d "$HOME/libft" ]]; then
-        git clone git@github.com:Geam/libft.git libft
-    fi
-    if [[ ! -d "$HOME/scripts" ]]; then
-        git clone git@github.com:Geam/scripts.git scripts
-    fi
     if [[ ! -L "$HOME/sgoinfre" ]]; then
         ln -s /nfs/sgoinfre
     fi
     brew update
     source $HOME/.zshrc
     brew install htop tig
+	brew install valgrind
 fi

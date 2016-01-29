@@ -27,6 +27,10 @@ alias gccl="gcc -I $LIB/includes -L $LIB -lft"
 alias gcclf="gcc -Wall -Wextra -Werror -I $LIB/includes -L $LIB -lft"
 alias g++f="g++ -Wall -Wextra -Werror"
 
+# valgrind
+alias vg="~/.brew/bin/valgrind"
+alias vgl="vg --tool=memcheck --leak-check=full"
+
 # Definition des alias
 alias auteur="echo '$USER' > auteur"
 alias clean="find . -name '*~' -execdir rm {} \;"
