@@ -22,7 +22,7 @@ function usage()
     echo -e "\t-c|--clean : delete all symlink and restore previous file if any"
     echo -e "\t-h|--help : display this help"
     echo -e "\t-l|--symlink: update symlink"
-    echo -e "\t-f|--full : my personnal config /!\\ DO NOT USE IT"
+    echo -e "\t-f|--full : config for 42"
     exit 0
 }
 
