@@ -143,4 +143,3 @@ if [[ "$OLD_HOME" != "$HOME" ]]; then
     echo "| /!\\ You've changed zsf |"
     echo "+------------------------+"
 fi
-source /nfs/zfs-student-2/users/agaspar/.Sublivim/sublivimrc.sh
