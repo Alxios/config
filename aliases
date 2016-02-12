@@ -28,8 +28,8 @@ alias gcclf="gcc -Wall -Wextra -Werror -I $LIB/includes -L $LIB -lft"
 alias g++f="g++ -Wall -Wextra -Werror"
 
 # valgrind
-alias vg="~/.brew/bin/valgrind"
-alias vgl="vg --tool=memcheck --leak-check=full"
+alias vl="~/.brew/bin/valgrind"
+alias vlg="vg --tool=memcheck --leak-check=full"
 
 # Definition des alias
 alias auteur="echo '$USER' > auteur"
@@ -41,4 +41,6 @@ alias next="source nextprev next"
 alias purgevim="rf -f ~/.vim/tmp/*.swp ~/.vim/tmp/.*.swp"
 alias prev="source nextprev prev"
 alias rl="source ~/.zshrc"
+alias rt="cd -"
 
+function norme() { norminette $1 | sed "s/Norme/[0;1;47m[0;38;5;47mNorme/g; s/Warning/[38;5;196mWarning/g; s/Error/\[38;5;9m Error/g" }
