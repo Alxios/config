@@ -94,9 +94,12 @@ if [[ -n "${FULL}" ]]; then
     if [[ ! -L "$HOME/sgoinfre" ]]; then
         ln -s /nfs/sgoinfre
     fi
-    brew update
     source $HOME/.zshrc
-    brew install htop tig
+	export HOMEBREW_CACHE=/tmp/mycache
+	export HOMEBREW_TEMP=/tmp/mytemp
+	mkdir /tmp/mycache /tmp/mytemp
+	/usr/local/bin/brew update
+    brew install htop
     brew install valgrind
     export PATH=$HOME/.brew/bin:$PATH
 fi
