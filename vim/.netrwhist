@@ -1,0 +1,10 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =8
+let g:netrw_dirhist_1='/nfs/2015/a/agaspar/ft_select/srcs'
+let g:netrw_dirhist_2='/nfs/2015/a/agaspar/ft_printf/srcs'
+let g:netrw_dirhist_3='/nfs/2015/a/agaspar/push_swap/srcs'
+let g:netrw_dirhist_4='/nfs/2015/a/agaspar/libft/includes'
+let g:netrw_dirhist_5='/nfs/2015/a/agaspar/push_swap/srcs'
+let g:netrw_dirhist_6='/nfs/2015/a/agaspar/libft/srcs/io/printf'
+let g:netrw_dirhist_7='/nfs/2015/a/agaspar/libft/srcs'
+let g:netrw_dirhist_8='/nfs/2015/a/agaspar/push_swap/srcs'

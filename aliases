@@ -2,6 +2,9 @@
 # Definition des alias raccourcis
 alias goinfre='cd /nfs/sgoinfre/goinfre/'
 
+#composer
+alias composer='php ~/composer.phar'
+
 # Definition des alias de git
 alias ga="git add"
 alias gb="git branch"

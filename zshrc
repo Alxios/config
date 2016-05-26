@@ -1,6 +1,9 @@
 # Definition du PATH
-PATH=$HOME/scripts:$HOME/.brew/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/texbin
+PATH=$HOME/http/bin:$HOME/.npm/bin:$HOME/scripts:$HOME/.brew/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/texbin
 export PATH
+
+export HOMEBREW_CACHE=/tmp/mycache
+export HOMEBREW_TEMP=/tmp/mytemp
 
 # Configuration de l'historique
 HISTFILE=~/.zshrc_history
