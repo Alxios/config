@@ -91,15 +91,14 @@ fi
 
 if [[ -n "${FULL}" ]]; then
     cd $HOME
-    if [[ ! -L "$HOME/sgoinfre" ]]; then
-        ln -s /nfs/sgoinfre
-    fi
-    source $HOME/.zshrc
-	export HOMEBREW_CACHE=/tmp/mycache
-	export HOMEBREW_TEMP=/tmp/mytemp
-	mkdir /tmp/mycache /tmp/mytemp
-	/usr/local/bin/brew update
-    brew install htop
-    brew install valgrind
-    export PATH=$HOME/.brew/bin:$PATH
+
+	sh -c "$(curl -fsSL https://raw.githubusercontent.com/kube/42homebrewfix/master/install.sh)"
+
+	brew install htop
+    brew install valgrindi
+	brew install npm
+
+	npm install -g nodemon
+	npm install -g npm-check-updates
+
 fi
