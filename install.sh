@@ -95,7 +95,7 @@ if [[ -n "${FULL}" ]]; then
 	sh -c "$(curl -fsSL https://raw.githubusercontent.com/kube/42homebrewfix/master/install.sh)"
 
 	brew install htop
-    brew install valgrindi
+    	brew install valgrind
 	brew install npm
 
 	npm install -g nodemon
