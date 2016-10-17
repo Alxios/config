@@ -94,6 +94,8 @@ if [[ -n "${FULL}" ]]; then
 
 	sh -c "$(curl -fsSL https://raw.githubusercontent.com/kube/42homebrewfix/master/install.sh)"
 
+	bash
+
 	brew install htop
     	brew install valgrind
 	brew install npm
@@ -101,4 +103,8 @@ if [[ -n "${FULL}" ]]; then
 	npm install -g nodemon
 	npm install -g npm-check-updates
 
+	exit
+	
+	echo "Please restart your terminal!"
+	
 fi
